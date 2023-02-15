@@ -1,0 +1,47 @@
+Defaults:
+  max: 10 #Máximo de posições no top.
+
+ArmorStand: #ArmorStand do top
+  skull:
+    player: true #Se estiver true, a cabeça do armorstand vai ser a do player.
+    url: '' #Uso apenas caso a opção 'player' estiver false.
+  small: true #ArmorStand pequeno ou não.
+  hologram:
+    distance: 1.5 #Distância do holograma pro armorstand.
+    #Colocar a cabeça do dono do spawner: #$icon-owner.
+    #Colocar icone no holograma: "$icon:(material do item):(data do item)".
+    #Caso queira um icon de skull url, use: "$icon-url:(url da skull)".
+    lines:
+      - "&aTop &f{pos}"
+      - ''
+      - '&aPlayer: &f{player}'
+      - '&aTotal acumulado em spawners:'
+      - '&f{value}'
+  acessories:
+    itemInHand: #Item na mão do armorstand.
+      enable: true #Ativar?
+      item:
+        id: 276
+        data: 0
+    helmet: #Capacete
+      enable: false
+      item:
+        id: 0
+        data: 0
+    chestplate: #Capacete
+      enable: false
+      item:
+        id: 0
+        data: 0
+    leggings: #Capacete
+      enable: false
+      item:
+        id: 0
+        data: 0
+    boots: #Capacete
+      enable: false
+      item:
+        id: 0
+        data: 0
+
+Locations: [] #De preferência, não mexa nesta área.

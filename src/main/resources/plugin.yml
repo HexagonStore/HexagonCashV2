@@ -1,0 +1,7 @@
+name: HexagonCash
+version: 1.0.0-ALPHA
+main: com.hexagonstore.cash.CashSpigot
+author: sailez_
+softdepend: [PlaceholderAPI]
+commands:
+  cash:

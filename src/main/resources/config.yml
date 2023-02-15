@@ -1,0 +1,83 @@
+Database:
+  type: SQLITE #Tipos: MYSQL, MYSQL_FAST, SQLITE.
+  user: root
+  pass: ""
+  host: localhost:3306
+  database: test
+
+Debug:
+  enable: true #Habilitar debug no console.
+
+CashInicial: #Cash inicial ao entrar no servidor pela primeira vez.
+  ativar: false #Caso queira ativar o cash inicial deixe true, caso não queira, deixe false.
+  cash: 0.0 #Ignore caso a opção "ativar" estiver false;
+
+Formatter:
+  ativar: true #Caso queira ativar formatador de cash deixe true, caso não queira, deixe false.
+  suffixes:
+    - "" #DEIXE UM ESPAÇO VÁZIO NA LISTA.
+    - "K" #K = Mil;
+    - "M" #M = Milhão;
+    - "B" #B = Bilhão;
+    - "T" #T = Trilhão;
+    - "Q" #Q = Quadrilhão;
+    - "QQ" #QQ = Quintilhão;
+    - "S" #S = Sextilhão;
+    - "SS" #SS = Septilhão;
+    - "O" #O = Octilhão;
+    - "N" #N = Nonilhão;
+    - "D" #D = Decilhão;
+
+cmd permission:
+  admin: "cash.admin" #Permissão obrigatória.
+  normal: "cash.cmd" #Deixe "" caso não queira nenhuma permissão.
+
+Top:
+  delay: 2 #Minutos para atualizar o tópico.
+
+Messages:
+  no_console: "&cComando desativado via Console."
+  no_permission: "&cVocê não tem permissão suficiente."
+  no_exists: "&cConta inexistente."
+  invalid_number: "&cDigite um número válido."
+  cash: "&aSeu saldo de cash: &f{cash}."
+  cash_target: "&aO saldo de: &f{player}, &aé: &f{cash}."
+  added: "&aVocê adicionou ao saldo de: &f{player} &aa quantia de: &f{cash}."
+  setted: "&aVocê setou o saldo de: &f{player} &apara a quantia de: &f{cash}."
+  removed: "&aVocê removeu do saldo de: &f{player} &aa quantia de: &f{cash}."
+  no_has_top: "&cNão há um top na posição &f{pos}."
+  top_set: "&aTop setado com êxito."
+  top_delete: "&eTop deletado com êxito."
+  number_must_higher: "&cO núimero precisa ser maior que zero."
+  no_args:
+    set: "&cUtilize: /cash set <player> <quantia>."
+    add: "&cUtilize: /cash add <player> <quantia>."
+    remove: "&cUtilize: /cash remove <player> <quantia>."
+    ver: "&cUtilize: /cash ver <player>."
+    settop: "&cUtilize: /cash top set <pos>."
+    deltop: "&cUtilize: /cash top del <pos>."
+  help:
+    admin:
+      - " "
+      - "     &e&lAJUDA     "
+      - " "
+      - " &a/cash &8- &7Veja seu saldo de cash."
+      - " &a/cash help &8- &7Veja essa mensagem."
+      - " &a/cash shop &8- &7Compre produtos com cash."
+      - " &a/cash <player> &8- &7Veja o saldo de cash de algum jogador."
+      - " "
+      - " &a/cash set <player> <quantia> &8- &7Sete o saldo de cash de algum jogador."
+      - " &a/cash remove <player> <quantia> &8- &7Remova uma quantia de cash do saldo de algum jogador."
+      - " &a/cash add <player> <quantia> &8- &7Adicione uma quantia de cash no saldo de algum jogador."
+      - " "
+      - " &a/cash top set <pos> &8- &7Sete o NPC do top cash de uma posição específica do ranking."
+      - " &a/cash top del <pos> &8- &7Delete o NPC do top cash de uma posição específica do ranking."
+    normal:
+      - " "
+      - "     &e&lAJUDA     "
+      - " "
+      - " &a/cash &8- &7Veja seu saldo de cash."
+      - " &a/cash help &8- &7Veja essa mensagem."
+      - " &a/cash shop &8- &7Compre produtos com cash."
+      - " &a/cash <player> &8- &7Veja o saldo de cash de algum jogador."
+      - " "
